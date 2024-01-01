@@ -28,3 +28,4 @@ st.markdown(
 )
 
 st.success('Please **go to the next pages** to get the predictions.')
+st.sidebar.markdown("Desenvolvido por ***Fernando Virgilio***")
