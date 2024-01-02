@@ -8,6 +8,8 @@ st.set_page_config(page_title="Free Lime Prediction", page_icon="../img/grafico.
 st.sidebar.header('Trends')
 st.title("FreeLime Prediction x FreeLime Real")
 
+
+st.markdown("First add your file on File Prediction page to trend the results")
 st.markdown("Trend based on the last 20 values:")
 
 
