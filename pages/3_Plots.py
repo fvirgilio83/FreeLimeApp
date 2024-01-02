@@ -11,7 +11,7 @@ st.title("FreeLime Prediction x FreeLime Real")
 st.markdown("Trend based on the last 20 values:")
 
 
-grafico =st.session_state["data"] :
+grafico =st.session_state["data"] 
 
 c= [i for i in range(1,21,1)]
 fig, ax =plt.subplots(figsize=(10,8), layout='constrained')
