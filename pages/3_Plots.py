@@ -12,8 +12,8 @@ st.title("FreeLime Prediction x FreeLime Real")
 st.markdown("First add your file on File Prediction page to trend the results")
 st.markdown("Trend based on the last 20 values:")
 
-
-grafico =st.session_state["data"] 
+if "data" is in st.session_state:
+  grafico =st.session_state["data"] 
 
 c= [i for i in range(1,21,1)]
 fig, ax =plt.subplots(figsize=(10,8), layout='constrained')
