@@ -11,22 +11,21 @@ st.title("FreeLime Prediction x FreeLime Real")
 st.markdown("Trend based on the last 20 values:")
 
 
+grafico =st.session_state["data"] :
 
-if grafico =st.session_state["data"] :
-
-  c= [i for i in range(1,21,1)]
-  fig, ax =plt.subplots(figsize=(10,8), layout='constrained')
-
-
-  x1= grafico.iloc[grafico.shape[0]-20:grafico.shape[0]+1,-2]
-  x2 = grafico.iloc[grafico.shape[0]-20:grafico.shape[0]+1,-1]
+c= [i for i in range(1,21,1)]
+fig, ax =plt.subplots(figsize=(10,8), layout='constrained')
 
 
-  ax.scatter(c,x1,facecolor = 'C1', edgecolor= 'k', label='FreeLime_Real')
-  ax.plot(c, x2, 'o--', label='FreeLime_Predicted')
-  ax.set_ylabel(' Free Lime ')
-  ax.set_xlabel(' Last 20 results ')
-  ax.legend()
+x1= grafico.iloc[grafico.shape[0]-20:grafico.shape[0]+1,-2]
+x2 = grafico.iloc[grafico.shape[0]-20:grafico.shape[0]+1,-1]
 
 
-  st.pyplot(fig)
+ax.scatter(c,x1,facecolor = 'C1', edgecolor= 'k', label='FreeLime_Real')
+ax.plot(c, x2, 'o--', label='FreeLime_Predicted')
+ax.set_ylabel(' Free Lime ')
+ax.set_xlabel(' Last 20 results ')
+ax.legend()
+
+
+st.pyplot(fig)
