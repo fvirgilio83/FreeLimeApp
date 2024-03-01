@@ -27,7 +27,6 @@ if "data" in st.session_state:
     ax.set_xlabel(' Last 20 results ')
     ax.legend()
 
-
-st.pyplot(fig)
+    st.pyplot(fig)
    
 
