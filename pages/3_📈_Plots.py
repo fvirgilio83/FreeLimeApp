@@ -10,8 +10,6 @@ st.title("FreeLime Prediction x FreeLime Real")
 
 st.markdown("Trend based on the last 20 values:")
 
-if "data" in st.session_state:
-    grafico =st.session_state["data"]
 
     c= [i for i in range(1,21,1)]
     fig, ax =plt.subplots(figsize=(10,8), layout='constrained')
@@ -29,5 +27,5 @@ if "data" in st.session_state:
 
 
     st.pyplot(fig)
-    if st.button("Redefinir valores"):
-        grafico =st.session_state["data"]
+   
+
