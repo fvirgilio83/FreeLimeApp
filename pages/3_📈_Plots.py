@@ -28,4 +28,6 @@ if "data" in st.session_state:
     ax.legend()
 
 
-    st.pyplot()
+    st.pyplot(fig)
+    if st.button("Redefinir valores"):
+        grafico =st.session_state["data"]
