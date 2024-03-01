@@ -10,7 +10,7 @@ st.title("FreeLime Prediction x FreeLime Real")
 
 st.markdown("Trend based on the last 20 values:")
 
-if "data" not in st.session_state:
+if "data" in st.session_state:
     grafico =st.session_state["data"]
 
     c= [i for i in range(1,21,1)]
@@ -28,4 +28,4 @@ if "data" not in st.session_state:
     ax.legend()
 
 
-    st.pyplot(fig)
+    st.pyplot()
